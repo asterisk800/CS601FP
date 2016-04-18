@@ -5,6 +5,7 @@
       <mapping ext="handelbars" type="Handlebars/Mustache" />
       <mapping pattern="object_factory" type="JavaScript" />
       <mapping pattern="homework5" type="PLAIN_TEXT" />
+      <mapping pattern=".keep" type="PLAIN_TEXT" />
       <mapping pattern="q7" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
