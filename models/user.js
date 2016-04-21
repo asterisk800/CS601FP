@@ -13,13 +13,11 @@ var UserSchema = mongoose.Schema({
 	email: {
 		type: String
 	},
-	sensor: [
-		{appliance: String},
-		{camera: String},
-		{lighting: String},
-		{locks: String},
-		{temperature: String}
-	]
+	sensor: [{appliance: String},
+		    {camera: String},
+		    {lighting: String},
+		    {locks: String},
+		    {temperature: String}]
 });
 
 var User = module.exports = mongoose.model('User', UserSchema);
