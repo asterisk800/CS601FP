@@ -2,11 +2,13 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var dateFormat = require('dateformat');
+var now = new Date();
 
 var User = require('../models/user');
 
 router.all('/login', function (req, res, next) {
-	console.log('Accessing the login section ...');
+	console.log('Accessing the login section ...' + dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT"));
 	next(); // pass control to the next handler
 });
 
