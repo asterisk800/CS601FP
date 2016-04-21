@@ -1,0 +1,13 @@
+nohup*
+node_modules
+# --------------------
+# IntelliJ Files
+# --------------------
+*.iml
+*.ipr
+*.iws
+*.xml
+*.log
+.idea/
+.DS_Store
+*.sock
