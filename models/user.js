@@ -12,12 +12,14 @@ var UserSchema = mongoose.Schema({
 	},
 	email: {
 		type: String
-	},
-	sensor: [{appliance: String},
-		    {camera: String},
-		    {lighting: String},
-		    {locks: String},
-		    {temperature: String}]
+    },
+    senser:[
+        {appliance: [{name: String}]},
+        {camera: [{name: String}]},
+        {lighting: [{name: String}]},
+        {locks: [{name: String}]},
+        {thermostat: [{name: String}]}
+        ]
 });
 
 var User = module.exports = mongoose.model('User', UserSchema);
@@ -45,9 +47,4 @@ module.exports.comparePassword = function(candidatePassword, hash, callback){
     	if(err) throw err;
     	callback(null, isMatch);
 	});
-}
-
-module.exports.getUserInfo = function(username, callback){
-	var query = {username: username};
-	User.findOne(query, callback);
 }
