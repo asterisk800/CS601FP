@@ -8,10 +8,9 @@ var now = new Date();
 var User = require('../models/user');
 
 router.all('/login', function (req, res, next) {
-	console.log('Accessing the login section ...' + dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT"));
+	console.log('Accessing ' + req.url + ': ' + dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT"));
 	next(); // pass control to the next handler
 });
-
 
 // Register
 router.get('/register', function(req, res){
@@ -22,6 +21,37 @@ router.get('/register', function(req, res){
 router.get('/login', function(req, res){
 	res.render('login');
 });
+
+router.get('/profile', function (req, res, next) {
+    console.log('Accessing ' + req.url + ': ' + dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT"));
+    next(); // pass control to the next handler
+
+});
+
+router.get('/profile', function (req, res, next) {
+    res.render('profile');
+})
+
+// Profile
+//router.get('/profile', function(req, res) {
+//    User.find({}, function(err, users) {
+//        var userMap = {};
+//
+//        users.forEach(function(user) {
+//            userMap[user._id] = user;
+//        });
+//
+//        res.send(userMap);
+//    });
+//});
+
+
+
+// Add Lighting
+
+router.get('/profile/lighting', function(req, res){
+    req.render('highlight');
+})
 
 // Register User
 router.post('/register', function(req, res){
@@ -103,5 +133,7 @@ router.get('/logout', function(req, res){
 
 	res.redirect('/users/login');
 });
+
+
 
 module.exports = router;
