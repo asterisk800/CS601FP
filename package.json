@@ -18,6 +18,7 @@
     "bootstrap": "^4.0.0-alpha.2",
     "connect-flash": "*",
     "cookie-parser": "^1.4.1",
+    "dateformat": "^1.0.12",
     "express": "*",
     "express-handlebars": "*",
     "express-messages": "*",
@@ -28,6 +29,7 @@
     "mongoose": "*",
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "tether": "^1.2.2"
   }
 }

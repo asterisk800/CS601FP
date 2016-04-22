@@ -1,0 +1,58 @@
+<%include header%>
+<%include navigator%>
+<div class="jumbotron-fluid">
+    <h2 class="page-header">Dashboard</h2>
+</div>
+
+<% if (user) {%>
+
+<div class="container-fluid">
+    <div class="jumbotron-fluid">
+        <h4 class="jumbotron-fluid">Welcome <%= user.email %>!</h4>
+    </div>
+</div>
+<% } %>
+
+<dir class="row">
+    <div class="col-lg-3">
+        <div class="card card-block">
+            <img class="card-img-top center-block" data-src="..." src="images/temperature-2-512.jpg" alt="Temperature" height="50%" width="50%">
+            <p class="card-title">With suppporting text below as a natural lead-in</p>
+            <a href="./temperature" class="btn btn-primary">Temperature</a>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="card card-block">
+            <img class="card-img-top center-block" data-src="..." src="images/light-bulb-2-512.jpg" alt="Lighting" height="50%" width="50%">
+            <p class="card-title">With suppporting text below as a natural lead-in</p>
+            <a href="./lighting" class="btn btn-primary">Lighting</a>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="card card-block">
+            <img class="card-img-top center-block" data-src="..." src="images/private-512.jpg" alt="Lock" height="50%" width="50%">
+            <p class="card-title">With suppporting text below as a natural lead-in</p>
+            <a href="./locks" class="btn btn-primary">Locks</a>
+        </div>
+    </div>
+
+
+    <div class="col-lg-3">
+        <div class="card card-block">
+            <img class="card-img-top center-block" data-src="..." src="images/security-camera-4-512.jpg" alt="Camera" height="50%" width="50%">
+            <p class="card-title">With suppporting text below as a natural lead-in</p>
+            <a href="./camera" class="btn btn-primary">Camera</a>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="card card-block">
+            <img class="card-img-top center-block" data-src="..." src="images/fridge-512.jpg" alt="Inside Weather image" height=50%" width="50%">
+            <p class="card-title">With suppporting text below as a natural lead-in</p>
+            <a href="./appliances" class="btn btn-primary">Appliances</a>
+        </div>
+    </div>
+</dir>
+<%include footer%>
