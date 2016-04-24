@@ -1,0 +1,42 @@
+<%include header%>
+<%include navigator%>
+<div class="jumbotron-fluid">
+    <h2 class="page-header">Camera</h2>
+    <p>Home Automation Camera</p>
+</div>
+<dir class="row">
+    <h2>Add New Camera</h2>
+    <form class="form-register" method="POST" action="/sensors/add_camera">
+        <div class="form-group">
+            <label>Camear Name</label>
+            <input type="text" class="form-control" placeholder="Camera Name" name="name">
+        </div>
+        <div class="form-control">
+                <label for="location">Location</label>
+                <select class="form-control" name="location" id="location" data-live-search="true">
+                    <option value="Back porch">Back porch</option>
+                    <option value="Front Porch">Front Porch</option>
+                    <option value="Master Bed">Master Bed</option>
+                    <option value="Office">Office</option>
+                    <option value="Leaving Room">Leaving Room</option>
+                    <option value="Bathrooms">Bathrooms</option>
+                    <option value="Bathrooms">Bathrooms</option>
+                    <option value="Basement">Basement</option>
+                    <option value="Leaving Room">Leaving Room</option>
+                    <option value="Kitchen">Kitchen</option>
+                    <option value="Dining Room">Dining Room</option>
+                </select>
+        </div>
+        <div class="form-group">
+            <label>Camera Description</label>
+            <input type="text" class="form-control" placeholder="Camera description" name="description">
+        </div>
+
+        <button type="submit" class="btn btn-default">Add Camera</button>
+    </form>
+</dir>
+
+
+
+<%include footer%>
+
